@@ -5,27 +5,36 @@
         </style>
     </head>
     <body>
-        <div class="formulaBar"></div>
+        <div class="formulaBar">formula bar</div>
         <div class="charButtons">
-          <button type="button" class="number-button" id="number-one-button">1</button>
-          <button type="button" class="number-button" id="number-two-button">2</button>
-          <button type="button" class="number-button" id="number-three-button">3</button>
-          <button type="button" class="number-button" id="number-four-button">4</button>
-          <button type="button" class="number-button" id="number-five-button">5</button>
-          <button type="button" class="number-button" id="number-six-button">6</button>
-          <button type="button" class="number-button" id="number-seven-button">7</button>
-          <button type="button" class="number-button" id="number-eight-button">8</button>
-          <button type="button" class="number-button" id="number-nine-button">9</button>
-          <button type="button" class="number-button" id="number-zero-button">0</button>
+          <button type="button" value="1" class="number-button" id="number-one-button">1</button>
+          <button type="button" value="2" class="number-button" id="number-two-button">2</button>
+          <button type="button" value="3" class="number-button" id="number-three-button">3</button>
+          <button type="button" value="4" class="number-button" id="number-four-button">4</button>
+          <button type="button" value="5" class="number-button" id="number-five-button">5</button>
+          <button type="button" value="6" class="number-button" id="number-six-button">6</button>
+          <button type="button" value="7" class="number-button" id="number-seven-button">7</button>
+          <button type="button" value="8" class="number-button" id="number-eight-button">8</button>
+          <button type="button" value="9" class="number-button" id="number-nine-button">9</button>
+          <button type="button" value="0" class="number-button" id="number-zero-button">0</button>
         </div>
         <div class="EquaButtons"></div>
         <script>
-            //button class
-
-		// alex made a change
-
-
-            //
+		// description: give function an DOM element and it will return the value attribute parsed into a int
+		// parameters: DOM element
+		// return: int
+		function getElemValueInt(elem = 0){
+			if(elem != 0){
+				var val = parseInt(elem.value)
+				if(val != NaN){
+					return val;
+				}
+			}	
+		}
+		
+		// varables
+		var formulaBarElem = document.getElementsByClassName("formulaBar")[0];
+		
         </script>
     </body>
 </html>
