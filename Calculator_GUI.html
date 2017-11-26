@@ -5,7 +5,7 @@
         </style>
     </head>
     <body>
-        <div class="formulaBar"></div>
+        <div class="formulaBar">formula bar</div>
         <div class="charButtons">
           <button type="button" value="1" class="number-button" id="number-one-button">1</button>
           <button type="button" value="2" class="number-button" id="number-two-button">2</button>
@@ -20,7 +20,7 @@
         </div>
         <div class="EquaButtons"></div>
         <script>
-		// description: give function an element and it will parse value into int
+		// description: give function an DOM element and it will return the value attribute parsed into a int
 		// parameters: DOM element
 		// return: int
 		function getElemValueInt(elem = 0){
@@ -31,6 +31,9 @@
 				}
 			}	
 		}
+		
+		// varables
+		var formulaBarElem = document.getElementsByClassName("formulaBar")[0];
 		
         </script>
     </body>
