@@ -5,7 +5,7 @@
         </style>
     </head>
     <body>
-        <div class="formulaBar">formula bar</div>
+        <div class="formulaBar"></div>
         <div class="charButtons">
           <button type="button" value="1" class="number-button" id="number-one-button">1</button>
           <button type="button" value="2" class="number-button" id="number-two-button">2</button>
@@ -34,6 +34,19 @@
 		
 		// varables
 		var formulaBarElem = document.getElementsByClassName("formulaBar")[0];
+		
+		// description: adds a function to all number-button elements on click
+		// parameters: function
+		// returns: nothing
+		function addFuncToNumberButtonClassElementsOnClick(func){
+			var elemCollection = document.getElementsByClassName("number-button");
+
+			var elemArray = [];
+
+			for(var i = 0; i < elemCollection.length; i++){elemArray.push(elemCollection[i])};
+
+			elemArray.forEach(function(element) {element.addEventListener("click",function(){formulaBarElem.innerHTML += getElemValueInt(element)})});
+		}
 		
         </script>
     </body>
